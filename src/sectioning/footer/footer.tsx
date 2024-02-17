@@ -1,5 +1,5 @@
 export const Footer = (): JSX.Element => (
   <footer>
-    <div>Footer</div>
+    <div className="y-wrap">Footer</div>
   </footer>
 );

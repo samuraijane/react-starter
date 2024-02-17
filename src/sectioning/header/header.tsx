@@ -1,5 +1,5 @@
 export const Header = (): JSX.Element => (
   <header>
-    <div>Header</div>
+    <div className="y-wrap">Header</div>
   </header>
 );

@@ -1,5 +1,5 @@
 export const Main = (): JSX.Element => (
   <main>
-    <div>Main</div>
+    <div className="y-wrap">Main</div>
   </main>
 );

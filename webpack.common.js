@@ -22,6 +22,7 @@ module.exports = {
   ],
   resolve: {
     alias: {
+      fonts: resolve(__dirname, "src/assets/fonts"),
       theme: resolve(__dirname, "src/theme")
     },
     extensions: [".js", ".ts", ".tsx"] // NOTE 1

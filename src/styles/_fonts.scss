@@ -1,1 +1,16 @@
-// tbd
+@mixin sharedFontFaceProps() {
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "roboto-light"; // 300
+  src: url("fonts/roboto-light.ttf") format("truetype");
+  @include sharedFontFaceProps();
+}
+
+@font-face {
+  font-family: "roboto-condensed-regular"; // 400
+  src: url("fonts/roboto-condensed-regular.ttf") format("truetype");
+  @include sharedFontFaceProps();
+}

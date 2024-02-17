@@ -1,0 +1,15 @@
+header {
+
+  .header__navs {
+    display: flex;
+
+    a {
+      margin: 0 0 0 18px;
+    }
+
+    a:first-of-type {
+      flex: 1;
+      margin-left: 0;
+    }
+  }
+}

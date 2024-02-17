@@ -1,15 +1,25 @@
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { resolve } = require("path");
 
 module.exports = {
   entry: "./src/index.tsx",
   module: {
     rules: [
+      {
+        test: /\.scss$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
+      },
       { 
         test: /\.(ts|tsx)$/, 
         loader: "ts-loader" 
       }
     ]
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "style.css"
+    })
+  ],
   resolve: {
     alias: {
       theme: resolve(__dirname, "src/theme")

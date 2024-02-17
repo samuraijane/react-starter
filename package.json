@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "main": "webpack.config.js",
   "scripts": {
+    "client": "webpack serve --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -1,3 +1,5 @@
+const { resolve } = require("path");
+
 module.exports = {
   entry: "./src/index.tsx",
   module: {
@@ -9,6 +11,9 @@ module.exports = {
     ]
   },
   resolve: {
+    alias: {
+      theme: resolve(__dirname, "src/theme")
+    },
     extensions: [".js", ".ts", ".tsx"] // NOTE 1
   }
 };

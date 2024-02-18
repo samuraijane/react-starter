@@ -1,13 +1,21 @@
 [
   {
+    "href": "/",
+    "id": "header-nav-landing",
+    "text": "Home"
+  },
+  {
+    "href": "/portfolio",
     "id": "header-nav-portfolio",
     "text": "Portfolio"
   },
   {
+    "href": "/about",
     "id": "header-nav-about",
     "text": "About"
   },
   {
+    "href": "/contact",
     "id": "header-nav-contact",
     "text": "Contact"
   }

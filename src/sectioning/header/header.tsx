@@ -28,7 +28,7 @@ export const Header = ({ isMobile }: {isMobile: boolean}): JSX.Element => {
     <header>
       <nav className={`navs navs--${isMobile ? "mobile": "desktop"} y-wrap`}>
         <div className="logo-container">
-          <NavLink to="/">ACME, Corp.</NavLink>
+          <NavLink className="navs__ignore-active" to="/">ACME, Corp.</NavLink>
         </div>
         <>
           {isMobile && isShowMobileNav && (

@@ -3,6 +3,12 @@
 
 .navs {
 
+  a:not(.navs__ignore-active) {
+    &.active {
+      color: $active;
+    }
+  }
+
   &.navs--desktop {
     display: flex;
 

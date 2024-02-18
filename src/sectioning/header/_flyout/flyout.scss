@@ -1,0 +1,58 @@
+@use "theme/mixins" as *;
+@use "theme/variables" as *;
+
+.navs {
+
+  &.navs--mobile {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      padding-right: 0;
+    }
+
+    .flyout-btn {
+      background-color: transparent;
+      border: 1px solid transparent;
+      display: flex;
+      flex-direction: column;
+      height: 22px;
+      justify-content: center;
+      position: relative;
+      z-index: 2147483647;
+
+      .flyout-btn__stripe {
+        background-color: $black;
+        display: block;
+        height: 2px;
+        transform: rotate(0deg) translateX(0, 0);
+        transition: all 200ms ease-in-out;
+        width: 16px;
+      }
+
+      .flyout-btn__stripe {
+        margin: 2px 0;
+      }
+
+      &.flyout-btn--active {
+
+        .flyout-btn__stripe {
+          background-color: black;
+
+          &:first-of-type {
+            transform: rotate(45deg) translate(2px, 2px);
+          }
+
+          &:nth-last-of-type(2) {
+            position: absolute;
+            right: -1000%;
+          }
+
+          &:last-of-type {
+            transform: rotate(-45deg) translate(2px, -2px);
+          }
+        }
+      }
+    }
+  }
+}

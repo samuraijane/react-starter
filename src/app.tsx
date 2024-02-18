@@ -46,7 +46,7 @@ export const App = (): JSX.Element => {
 
   return (
     <div className="y-sticky">
-      <Header />
+      <Header isMobile={isMobile} />
       <Main />
       <Footer />
       {isShowResponsive && (

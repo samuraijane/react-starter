@@ -1,6 +1,9 @@
-header {
+@use "theme/mixins" as *;
+@use "theme/variables" as *;
 
-  .header__navs {
+.navs {
+
+  &.navs--desktop {
     display: flex;
 
     a {

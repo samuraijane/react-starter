@@ -1,9 +1,5 @@
 [
   {
-    "id": "header-nav-home",
-    "text": "ACME, Corp."
-  },
-  {
     "id": "header-nav-portfolio",
     "text": "Portfolio"
   },

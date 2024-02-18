@@ -15,3 +15,11 @@ Fonts
 */
 $robotoLight: roboto-light, sans-serif;
 $robotoCondensedRegular: roboto-condensed-regular, sans-serif;
+
+/*
+------------------------------------------------------------------------
+Inner Wrap
+------------------------------------------------------------------------
+*/
+$innerWrapWidth: 90%;
+$innerWrapSide: calc((100% - $innerWrapWidth) / 2);

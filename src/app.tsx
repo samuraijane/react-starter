@@ -2,6 +2,7 @@ import { KeyboardEvent, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useViewport } from "./hooks/useViewport";
 import { setScreenSize } from "./features/screenSizeSlice";
+import { setEnvironment } from "./features/environmentSlice";
 import { ScreenSizesPx } from "./global-types/enums/screen-sizes";
 import { Footer, Header, Main } from "./sectioning";
 import { Responsive } from "./components/dev/responsive/responsive";
@@ -41,8 +42,10 @@ export const App = (): JSX.Element => {
     name,
     width
   };
-
   dispatch(setScreenSize(screenSize));
+
+  const { hostname, origin, port } = window.location;
+  dispatch(setEnvironment({ hostname, origin, port}));
 
   return (
     <div className="y-sticky">

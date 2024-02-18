@@ -1,11 +1,14 @@
 import { MouseEventHandler, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useDisableBodyScroll } from "../../hooks/useDisableBodyScroll";
 import { FlyoutBtn } from "./_flyout/flyout";
 import "./header.scss";
 import navs from "./navs.json";
 
 export const Header = ({ isMobile }: {isMobile: boolean}): JSX.Element => {
   const [isShowMobileNav, setIsShowMobileNav] = useState(false);
+
+  useDisableBodyScroll(isShowMobileNav);
 
   const _navs = navs.map((nav) => (
     <NavLink

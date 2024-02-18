@@ -1,1 +1,44 @@
-// tbd
+@use "theme/variables" as *;
+
+// [1]
+
+/*
+----------------------------------------------------------------------
+Media Queries
+----------------------------------------------------------------------
+*/
+
+@mixin Nmq($size) {
+  @if       $size == xxsmall      { @media only screen and (min-width: 320px)  { @content; } }
+  @else if  $size == xsmall       { @media only screen and (min-width: 360px)  { @content; } }
+  @else if  $size == small        { @media only screen and (min-width: 500px)  { @content; } }
+  @else if  $size == intermediate { @media only screen and (min-width: 576px)  { @content; } }
+  @else if  $size == large        { @media only screen and (min-width: 768px)  { @content; } }
+  @else if  $size == xlarge       { @media only screen and (min-width: 992px)  { @content; } }
+  @else if  $size == xxlarge      { @media only screen and (min-width: 1200px) { @content; } }
+}
+
+//----------------------------------------------------------------------
+// For use in development only
+//----------------------------------------------------------------------
+@mixin Debug() {
+
+  &::after {
+    background-color: rgba(100, 149, 237, 0.1);
+    content: "";
+    height: 100%;
+    left: $innerWrapSide;
+    position: fixed;
+    top: 0;
+    width: $innerWrapWidth;
+    z-index: 2147483646;
+  }
+}
+
+/*
+NOTES
+  [1] With `@use` mixins whose names begin with an underscore or a dash
+      are private and cannot be exported for use in external files. See
+      sass-lang.com/documentation/at-rules/use/#private-members for more
+      information.
+*/

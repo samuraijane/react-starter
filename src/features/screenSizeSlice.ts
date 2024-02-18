@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { ScreenSizesName } from '../global-types/enums/screen-sizes';
 
-interface ScreenSize {
+export interface ScreenSize {
   height: number;
   isMobile: boolean;
   name: ScreenSizesName;
@@ -17,6 +17,8 @@ export const screenSizeSlice = createSlice({
 });
 
 export const { setScreenSize } = screenSizeSlice.actions;
-export const selectScreemSize = (state: ScreenSize) => state;
+export const selectScreenSize = (state: {screenSize: ScreenSize}) => (
+  state.screenSize
+);
 
 export default screenSizeSlice.reducer;

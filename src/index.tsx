@@ -1,5 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { ViewportProvider } from "./context/viewportContext";
 import { App } from "./app";
 import "./styles/style.scss";
 
@@ -8,6 +9,8 @@ const root = container && createRoot(container);
 
 root?.render(
   <StrictMode>
-    <App />
+    <ViewportProvider>
+      <App />
+    </ViewportProvider>
   </StrictMode>
 );

@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { store } from './app/store';
 import { ViewportProvider } from "./context/viewportContext";
 import { App } from "./app";
+import { ScrollToTop } from "./utils/scrollToTop";
 import "./styles/style.scss";
 
 const container: HTMLElement | null = document.getElementById("root");
@@ -15,6 +16,7 @@ root?.render(
     <Provider store={store}>
       <BrowserRouter>
         <ViewportProvider>
+          <ScrollToTop />
           <App />
         </ViewportProvider>
       </BrowserRouter>

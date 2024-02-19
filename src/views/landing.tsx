@@ -11,7 +11,7 @@ export const LandingPage = (): JSX.Element => {
       <div className="nimg">
         <img
           alt="JoAnn Morgan and other launch controllers in the firing room at Kennedy Space Center watch the launch of Apollo 11 in 1969."
-          src={`${baseUrl}/assets/images/joann-morgan.jpg`}
+          src={`${baseUrl}assets/images/joann-morgan.jpg`}
         />
       </div>
     </div>

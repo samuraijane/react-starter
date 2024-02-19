@@ -20,12 +20,12 @@ export const getEnvironment = (url: LocationUrl): EnvValues => {
   const { hostname, origin, port } = url;
 
   const envValues: EnvValues = {
-    baseUrl: `${origin}`,
+    baseUrl: "/",
     environment: Environments.PROD
   }
 
   if (hostname === "localhost" && port === "3000") {
-    envValues.baseUrl = "http://localhost:8080";
+    envValues.baseUrl = "http://localhost:8080/";
     envValues.environment = Environments.LOCAL_REACT;
   }
   if (hostname === "localhost" && port === "8080") {

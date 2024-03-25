@@ -18,7 +18,10 @@
 
     .logo-container {
       flex: 1;
-      margin-left: 0;
+
+      a {
+        margin-left: 0;
+      }
     }
   }
 

@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from 'react';
 import { debounce } from '../utils/utils';
-import { ScreenSizesName } from '../global-types/enums/screen-sizes';
+import { ViewportNames } from '../types/enum';
 
 interface ViewContextProps {
   children: JSX.Element | JSX.Element[];
@@ -8,15 +8,15 @@ interface ViewContextProps {
 
 export const ViewportContext = createContext<any>({});
 
-const getName = (width: number): ScreenSizesName => {
-  if (width >= 320 && width < 360) return ScreenSizesName.XX_SMALL;
-  if (width >= 360 && width < 500) return ScreenSizesName.X_SMALL;
-  if (width >= 500 && width < 576) return ScreenSizesName.SMALL;
-  if (width >= 576 && width < 768) return ScreenSizesName.INTERMEDIATE;
-  if (width >= 768 && width < 992) return ScreenSizesName.LARGE;
-  if (width >= 992 && width < 1200) return ScreenSizesName.X_LARGE;
-  if (width >= 1200) return ScreenSizesName.XX_LARGE;
-  return ScreenSizesName.ERROR;
+const getName = (width: number): ViewportNames => {
+  if (width >= 320 && width < 360) return ViewportNames.XX_SMALL;
+  if (width >= 360 && width < 500) return ViewportNames.X_SMALL;
+  if (width >= 500 && width < 576) return ViewportNames.SMALL;
+  if (width >= 576 && width < 768) return ViewportNames.INTERMEDIATE;
+  if (width >= 768 && width < 992) return ViewportNames.LARGE;
+  if (width >= 992 && width < 1200) return ViewportNames.X_LARGE;
+  if (width >= 1200) return ViewportNames.XX_LARGE;
+  return ViewportNames.ERROR;
 };
 
 export const ViewportProvider = ({ children }: ViewContextProps) => {

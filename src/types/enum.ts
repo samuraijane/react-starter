@@ -1,4 +1,4 @@
-enum ScreenSizesName {
+enum ViewportNames {
   ERROR = "error",
   XX_SMALL = "xx-small",
   X_SMALL = "x-small",
@@ -9,14 +9,14 @@ enum ScreenSizesName {
   XX_LARGE = "xx-large"
 }
 
-enum ScreenSizesPx {
+enum ViewportSizes {
   XX_SMALL = 320,
   X_SMALL = 360,
   SMALL = 500,
   INTERMEDIATE = 576,
   LARGE = 768,
   X_LARGE = 992,
-  XX_LARGE = 1200,
+  XX_LARGE = 1200
 }
 
-export  { ScreenSizesName, ScreenSizesPx };
+export  { ViewportNames, ViewportSizes };

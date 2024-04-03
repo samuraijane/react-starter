@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useViewport } from "./hooks/useViewport";
 import { setScreenSize } from "./features/screenSizeSlice";
 import { setEnvironment } from "./features/environmentSlice";
-import { ScreenSizesPx } from "./global-types/enums/screen-sizes";
+import { ViewportSizes } from "./types/enum";
 import { Footer, Header, Main } from "./sectioning";
 import { Responsive } from "./components/dev/responsive/responsive";
 
@@ -34,7 +34,7 @@ export const App = (): JSX.Element => {
     }
   };
 
-  const isMobile = width && width < ScreenSizesPx.LARGE;
+  const isMobile = width && width < ViewportSizes.LARGE;
 
   const screenSize = {
     height,

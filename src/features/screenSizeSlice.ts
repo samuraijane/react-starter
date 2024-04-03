@@ -1,10 +1,10 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ScreenSizesName } from '../global-types/enums/screen-sizes';
+import { ViewportNames } from '../types/enum';
 
 export interface ScreenSize {
   height: number;
   isMobile: boolean;
-  name: ScreenSizesName;
+  name: ViewportNames;
   width: number;
 }
 

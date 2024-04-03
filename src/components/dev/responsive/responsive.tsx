@@ -1,10 +1,10 @@
-import { ScreenSizesName } from "../../../global-types/enums/screen-sizes";
+import { ViewportNames } from "../../../types/enum";
 import "./responsive.scss";
 
 interface ResponsiveProps {
   height: number;
   isMobile: boolean;
-  screenName: ScreenSizesName;
+  screenName: ViewportNames;
   width: number;
 }
 

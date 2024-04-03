@@ -13,7 +13,7 @@ React Starter is intended to be used in conjunction with [Express Starter](https
 ## Features
 - Mobile menu
 - Client-side routing
-- Viewport toggle for responsiveness development
+- Viewport toggle for responsive development
 
 ## Up and running
 The steps below assume you are using both repos for the client and the server. If you fork these repos in order to build your own applications, you should rename all instances of *react-starter* and *express-starter* to your desired names before executing `npm i` in either repo.

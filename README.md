@@ -46,3 +46,6 @@ At root, we have a directory for **types/**. This is where we keep the defintion
 
 ## BEM and Stylesheets
 This application is written using the *block-element-modifier* [methodology](https://getbem.com/introduction/) for CSS. Global styles live in **src/styles/** but if a component needs style rules specific to said component, use a sibling stylesheet.
+
+## Responsive Design
+This application includes a tool that shows the viewport dimensions fixed at the top center of the viewport. The tool cannot be toggle on and off on Mac with the keyboard combination of *control* + *option* + *command* + *r*.

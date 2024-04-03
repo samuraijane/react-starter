@@ -1,8 +1,8 @@
 import { KeyboardEvent, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { useViewport } from "./hooks/useViewport";
-import { setScreenSize } from "./features/screenSizeSlice";
-import { setEnvironment } from "./features/environmentSlice";
+import { useViewport } from "./hooks/use-viewport";
+import { setScreenSize } from "./features/screen-size-slice";
+import { setEnvironment } from "./features/environment-slice";
 import { ViewportSizes } from "./types/enum";
 import { Footer, Header, Main } from "./sectioning";
 import { Responsive } from "./components/dev/responsive/responsive";

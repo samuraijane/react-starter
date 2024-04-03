@@ -1,6 +1,6 @@
 import { MouseEventHandler, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { useDisableBodyScroll } from "../../hooks/useDisableBodyScroll";
+import { useDisableBodyScroll } from "../../hooks/use-disable-body-scroll";
 import { FlyoutBtn } from "./_flyout/flyout";
 import "./header.scss";
 import navs from "./navs.json";

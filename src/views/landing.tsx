@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { selectEnvironment } from "../features/environmentSlice";
+import { selectEnvironment } from "../features/environment-slice";
 
 export const LandingPage = (): JSX.Element => {
   const { baseUrl } = useSelector(selectEnvironment);

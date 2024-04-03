@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import environmentReducer from "../features/environmentSlice";
-import screenSizeReducer from "../features/screenSizeSlice";
+import environmentReducer from "../features/environment-slice";
+import screenSizeReducer from "../features/screen-size-slice";
 
 export const store = configureStore({
   reducer: {

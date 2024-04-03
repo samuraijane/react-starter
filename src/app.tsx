@@ -1,7 +1,7 @@
 import { KeyboardEvent, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useViewport } from "./hooks/use-viewport";
-import { setScreenSize } from "./features/screen-size-slice";
+import { setViewport } from "./features/viewport-slice";
 import { setEnvironment } from "./features/environment-slice";
 import { ViewportSizes } from "./types/enum";
 import { Footer, Header, Main } from "./sectioning";
@@ -18,10 +18,10 @@ export const App = (): JSX.Element => {
   }, [isShowResponsive]);
 
   /**
-   * Toggles whether to show screen dimensions when the key combination
-   *   CTRL + OPTION + COMMAND + r is detected. This is intended to be
-   *   used during development only and has not been tested on a windows
-   *   machine.
+   * Toggles whether to show viewport dimensions when the key
+   *   combination CTRL + OPTION + COMMAND + r is detected. This is
+   *   intended to be used during development only and has not been
+   *   tested on a windows machine.
    * @todo We are not 100% sure that typecasting `_e` is the best way to
    *   remove the TS linting error in this case but we are leaving as
    *   is for now.
@@ -36,13 +36,13 @@ export const App = (): JSX.Element => {
 
   const isMobile = width && width < ViewportSizes.LARGE;
 
-  const screenSize = {
+  const viewport = {
     height,
     isMobile,
     name,
     width
   };
-  dispatch(setScreenSize(screenSize));
+  dispatch(setViewport(viewport));
 
   const { hostname, origin, port } = window.location;
   dispatch(setEnvironment({ hostname, origin, port}));
@@ -53,7 +53,7 @@ export const App = (): JSX.Element => {
       <Main />
       <Footer />
       {isShowResponsive && (
-        <Responsive height={height} isMobile={isMobile} screenName={name} width={width} />
+        <Responsive height={height} isMobile={isMobile} viewportName={name} width={width} />
       )}
     </div>
   );

@@ -4,13 +4,13 @@ import "./responsive.scss";
 interface ResponsiveProps {
   height: number;
   isMobile: boolean;
-  screenName: ViewportNames;
+  viewportName: ViewportNames;
   width: number;
 }
 
-export const Responsive = ({ height, isMobile, screenName, width }: ResponsiveProps) => (
+export const Responsive = ({ height, isMobile, viewportName, width }: ResponsiveProps) => (
   <div className={`responsive responsive--${isMobile ? "mobile" : "desktop"}`}>
-    <span>{screenName}</span>
+    <span>{viewportName}</span>
     <span>{width} x {height}</span>
   </div>
 );
